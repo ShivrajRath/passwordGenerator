@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/ShivrajRath/passwordGenerator.svg?branch=main)](https://travis-ci.com/ShivrajRath/passwordGenerator)
 
+[Try it here](https://novicelab.org/passwordGenerator/)
+
 # passwordGenerator
 
 Generates random strong password. No external configuration needed.
