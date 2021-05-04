@@ -1,24 +1,24 @@
-export const getRandom = (max, min = 0) => {
+const getRandom = (max, min = 0) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-export const getRandomAlphabet = () => {
+const getRandomAlphabet = () => {
   const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   return alphabets[getRandom(alphabets.length)];
 };
 
-export const getRandomNumber = () => {
+const getRandomNumber = () => {
   return getRandom(9);
 };
 
-export const getRandomSpecialChars = () => {
+const getRandomSpecialChars = () => {
   const specialChars = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   return specialChars[getRandom(specialChars.length)];
 };
 
-export const getRandomPasswordChar = () => {
+const getRandomPasswordChar = () => {
   const randomGenerators = [
     getRandomSpecialChars,
     getRandomNumber,
@@ -36,7 +36,12 @@ const generatePassword = () => {
   while (totalLength--) {
     password += getRandomPasswordChar();
   }
-  document.getElementById("password").innerText = password;
+  return password;
 };
 
-export default generatePassword;
+module.exports = {
+  generatePassword,
+  getRandomAlphabet,
+  getRandomNumber,
+  getRandomSpecialChars,
+};

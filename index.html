@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
-<body onload="generatePassword()">
+<body onload="getPassword()">
   <header>
     <h3>
       <span class="bb">Password Generator</span>
@@ -22,7 +22,7 @@
         Password</span>
     </p>
     <div class="mt-2 mb-2">
-      <input type="button" class="password-button" value="Generate New Password" onclick="generatePassword()">
+      <input type="button" class="password-button" value="Generate New Password" onclick="getPassword()">
     </div>
   </main>
   <footer class="mt-2">
@@ -36,6 +36,9 @@
   <script>
     const copy = () => {
       navigator.clipboard.writeText(document.getElementById("password").innerText);
+    };
+    const getPassword = () => {
+      document.getElementById("password").innerText = generatePassword();
     };
   </script>
 </body>
