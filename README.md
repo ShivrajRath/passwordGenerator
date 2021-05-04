@@ -1,3 +1,5 @@
+[![Build Status][travis-icon]][travis]
+
 # passwordGenerator
 
 Generates random strong password. No external configuration needed.
