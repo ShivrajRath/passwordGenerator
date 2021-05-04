@@ -1,24 +1,24 @@
-const getRandom = (max, min = 0) => {
+export const getRandom = (max, min = 0) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-const getRandomAlphabet = () => {
+export const getRandomAlphabet = () => {
   const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   return alphabets[getRandom(alphabets.length)];
 };
 
-const getRandomNumber = () => {
+export const getRandomNumber = () => {
   return getRandom(9);
 };
 
-const getRandomSpecialChars = () => {
+export const getRandomSpecialChars = () => {
   const specialChars = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   return specialChars[getRandom(specialChars.length)];
 };
 
-const getRandomPasswordChar = () => {
+export const getRandomPasswordChar = () => {
   const randomGenerators = [
     getRandomSpecialChars,
     getRandomNumber,
@@ -39,6 +39,4 @@ const generatePassword = () => {
   document.getElementById("password").innerText = password;
 };
 
-const copy = () => {
-  navigator.clipboard.writeText(document.getElementById("password").innerText);
-};
+export default generatePassword;
