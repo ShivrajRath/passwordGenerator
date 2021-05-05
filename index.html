@@ -5,6 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="MobileOptimized" content="width">
+  <meta name="description" content="One click password generator">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="keywords" content="password, generator, strong, one click">
+
   <title>Password Generator</title>
   <link rel="stylesheet" href="index.css">
 </head>
@@ -32,7 +37,6 @@
       <a href="https://www.buymeacoffee.com/rath" target="_blank">Buy me a coffee</a>
     </div>
   </footer>
-  <script src="index.js" type="text/javascript"></script>
   <script>
     const copy = () => {
       navigator.clipboard.writeText(document.getElementById("password").innerText);
@@ -41,6 +45,7 @@
       document.getElementById("password").innerText = generatePassword();
     };
   </script>
+  <script src="index.js" type="text/javascript"></script>
 </body>
 
 </html>
